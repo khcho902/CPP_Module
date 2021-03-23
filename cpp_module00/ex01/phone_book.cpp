@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 04:09:05 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/24 02:13:57 by kycho            ###   ########.fr       */
+/*   Updated: 2021/03/24 02:50:18 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook(void) : num_of_contact(0) {};
 
-int PhoneBook::get_num_of_contact(void)
+int PhoneBook::get_num_of_contact(void) const
 {
 	return (num_of_contact);
 }
@@ -90,7 +90,7 @@ int PhoneBook::add_contact(void)
 	return (SUCCESS);
 }
 
-std::string PhoneBook::truncate(const std::string str)
+std::string PhoneBook::truncate(const std::string str) const
 {
 	std::string truncated;
 
@@ -101,7 +101,7 @@ std::string PhoneBook::truncate(const std::string str)
 	return (truncated);
 }
 
-void PhoneBook::overview_contacts(void)
+void PhoneBook::overview_contacts(void) const
 {
 	std::cout << std::setw(10) << "index" << "|";
 	std::cout << std::setw(10) << "first name" << "|";
@@ -118,7 +118,7 @@ void PhoneBook::overview_contacts(void)
 	}
 }
 
-void PhoneBook::view_contact_detail(int idx)
+void PhoneBook::view_contact_detail(const int idx) const
 {
 	Contact c = contact[idx - 1];
 

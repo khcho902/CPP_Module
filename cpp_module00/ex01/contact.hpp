@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 03:22:55 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/22 04:08:16 by kycho            ###   ########.fr       */
+/*   Updated: 2021/03/24 02:46:50 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <iostream>
-# include <iomanip>
 # include <string>
 
 class Contact
@@ -34,29 +32,29 @@ private:
 	std::string darkest_secret;
 
 public:
-	void set_first_name(std::string str);
-	void set_last_name(std::string str);
-	void set_nickname(std::string str);
-	void set_login(std::string str);
-	void set_postal_address(std::string str);
-	void set_email_address(std::string str);
-	void set_phone_number(std::string str);
-	void set_birthday_date(std::string str);
-	void set_favorite_meal(std::string str);
-	void set_underwear_color(std::string str);
-	void set_darkest_secret(std::string str);
+	void set_first_name(const std::string str);
+	void set_last_name(const std::string str);
+	void set_nickname(const std::string str);
+	void set_login(const std::string str);
+	void set_postal_address(const std::string str);
+	void set_email_address(const std::string str);
+	void set_phone_number(const std::string str);
+	void set_birthday_date(const std::string str);
+	void set_favorite_meal(const std::string str);
+	void set_underwear_color(const std::string str);
+	void set_darkest_secret(const std::string str);
 
-	std::string get_first_name(void);
-	std::string get_last_name(void);
-	std::string get_nickname(void);
-	std::string get_login(void);
-	std::string get_postal_address(void);
-	std::string get_email_address(void);
-	std::string get_phone_number(void);
-	std::string get_birthday_date(void);
-	std::string get_favorite_meal(void);
-	std::string get_underwear_color(void);
-	std::string get_darkest_secret(void);
+	std::string get_first_name(void) const;
+	std::string get_last_name(void) const;
+	std::string get_nickname(void) const;
+	std::string get_login(void) const;
+	std::string get_postal_address(void) const;
+	std::string get_email_address(void) const;
+	std::string get_phone_number(void) const;
+	std::string get_birthday_date(void) const;
+	std::string get_favorite_meal(void) const;
+	std::string get_underwear_color(void) const;
+	std::string get_darkest_secret(void) const;
 };
 
 #endif
