@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 01:16:58 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/26 02:18:16 by kycho            ###   ########.fr       */
+/*   Updated: 2021/03/26 12:44:35 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Zombie
 
 public:
 	Zombie(std::string type, std::string name);
-	void announce(void);
+	void announce(void) const;
 };
 
 #endif

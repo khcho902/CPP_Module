@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 01:25:48 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/26 02:37:00 by kycho            ###   ########.fr       */
+/*   Updated: 2021/03/26 12:48:55 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class ZombieEvent
 
 public:
 	ZombieEvent(void);
-	void setZombieType(std::string type);
-	Zombie* newZombie(std::string name);
-	void randomChump(void);
+	void setZombieType(const std::string type);
+	Zombie* newZombie(const std::string name) const;
+	void randomChump(void) const;
 };
 
 #endif

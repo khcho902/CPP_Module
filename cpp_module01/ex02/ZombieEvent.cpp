@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 01:32:20 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/26 02:31:16 by kycho            ###   ########.fr       */
+/*   Updated: 2021/03/26 12:49:24 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ ZombieEvent::ZombieEvent(void)
 	srand(time(NULL));
 }
 
-void ZombieEvent::setZombieType(std::string type)
+void ZombieEvent::setZombieType(const std::string type)
 {
 	this->type = type;
 }
 
-Zombie* ZombieEvent::newZombie(std::string name)
+Zombie* ZombieEvent::newZombie(const std::string name) const
 {
 	Zombie *new_zombie;
 
@@ -30,7 +30,7 @@ Zombie* ZombieEvent::newZombie(std::string name)
 	return (new_zombie);
 }
 
-void ZombieEvent::randomChump(void)
+void ZombieEvent::randomChump(void) const
 {
 	std::string name;
 	int name_size;
