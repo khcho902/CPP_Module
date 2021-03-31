@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 20:35:05 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 00:41:39 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 01:53:31 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ public:
 	void		beRepaired(unsigned int amount);
 
 	void		showStatus(void) const;
+	std::string getName(void) const;
+	std::string getType(void) const;
 };
 
 #endif

@@ -6,71 +6,44 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 15:28:34 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 01:09:23 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 02:05:20 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int main(void)
 {
-	{
-		ClapTrap ct("ct");
-		ct.showStatus();
+	ClapTrap ct("ct");
+	FragTrap ft("ft");
+	ScavTrap st("st");
+	NinjaTrap nt("nt");
+	
+	nt.showStatus();
 
-		ct.meleeAttack("target");
-		ct.rangedAttack("target");
+	nt.meleeAttack("target");
+	nt.rangedAttack("target");
 
-		ct.takeDamage(120);
-		ct.showStatus();
+	nt.takeDamage(120);
+	nt.showStatus();
 
-		ct.beRepaired(50);
-		ct.showStatus();
-	}
+	nt.beRepaired(50);
+	nt.showStatus();
 	
 	std::cout << "\n###############################################\n" << std::endl;
 
-	{
-		FragTrap ft("ft");
-		ft.showStatus();
-
-		ft.meleeAttack("target");
-		ft.rangedAttack("target");
-
-		ft.vaulthunter_dot_exe("target");
-		ft.vaulthunter_dot_exe("target");
-		ft.vaulthunter_dot_exe("target");
-		ft.showStatus();
-
-		ft.takeDamage(110);
-		ft.showStatus();
-
-		ft.beRepaired(60);
-		ft.showStatus();
-	}
+	nt.ninjaShoebox(ct);
+	std::cout << std::endl;
+	nt.ninjaShoebox(ft);
+	std::cout << std::endl;
+	nt.ninjaShoebox(st);
+	std::cout << std::endl;
+	nt.ninjaShoebox(nt);
 
 	std::cout << "\n###############################################\n" << std::endl;
-
-	{
-		ScavTrap st("st");
-		st.showStatus();
-
-		st.meleeAttack("target");
-		st.rangedAttack("target");
-
-		st.challengeNewcomer("target");
-		st.challengeNewcomer("target");
-		st.challengeNewcomer("target");
-		st.showStatus();
-
-		st.takeDamage(110);
-		st.showStatus();
-
-		st.beRepaired(60);
-		st.showStatus();
-	}
 	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 20:35:13 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 01:05:21 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 01:54:10 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,4 +143,14 @@ void		ClapTrap::showStatus(void) const
 	std::cout << " hit_points    : " << hit_points << std::endl;
 	std::cout << " energy_points : " << energy_points << std::endl;
 	std::cout << "--------------------" << std::endl;
+}
+
+std::string ClapTrap::getName(void) const
+{
+	return name;
+}
+
+std::string ClapTrap::getType(void) const
+{
+	return type;
 }
