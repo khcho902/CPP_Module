@@ -6,51 +6,71 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 15:28:34 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/31 16:45:38 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 01:09:23 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
+	{
+		ClapTrap ct("ct");
+		ct.showStatus();
 
-	FragTrap ft("ft");
-	ScavTrap sc("sc");
+		ct.meleeAttack("target");
+		ct.rangedAttack("target");
 
-	ft.rangedAttack("robot1");
-	ft.meleeAttack("robot2");
+		ct.takeDamage(120);
+		ct.showStatus();
 
-	sc.rangedAttack("robot3");
-	sc.meleeAttack("robot4");
-
-	std::cout << std::endl;
-
-	ft.vaulthunter_dot_exe("robot3");
+		ct.beRepaired(50);
+		ct.showStatus();
+	}
 	
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
+	std::cout << "\n###############################################\n" << std::endl;
 
-	std::cout << std::endl;
+	{
+		FragTrap ft("ft");
+		ft.showStatus();
 
-	ft.takeDamage(55);
-	ft.takeDamage(65);
+		ft.meleeAttack("target");
+		ft.rangedAttack("target");
 
-	sc.takeDamage(55);
-	sc.takeDamage(65);
+		ft.vaulthunter_dot_exe("target");
+		ft.vaulthunter_dot_exe("target");
+		ft.vaulthunter_dot_exe("target");
+		ft.showStatus();
 
-	std::cout << std::endl;
+		ft.takeDamage(110);
+		ft.showStatus();
 
-	ft.beRepaired(30);
-	ft.beRepaired(90);
+		ft.beRepaired(60);
+		ft.showStatus();
+	}
+
+	std::cout << "\n###############################################\n" << std::endl;
+
+	{
+		ScavTrap st("st");
+		st.showStatus();
+
+		st.meleeAttack("target");
+		st.rangedAttack("target");
+
+		st.challengeNewcomer("target");
+		st.challengeNewcomer("target");
+		st.challengeNewcomer("target");
+		st.showStatus();
+
+		st.takeDamage(110);
+		st.showStatus();
+
+		st.beRepaired(60);
+		st.showStatus();
+	}
 	
-	sc.beRepaired(30);
-	sc.beRepaired(90);
-
-	std::cout << std::endl;
-
 	return 0;
 }

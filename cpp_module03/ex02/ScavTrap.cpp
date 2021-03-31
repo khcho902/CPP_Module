@@ -6,58 +6,45 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 16:26:16 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/31 16:40:36 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 01:07:48 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void)
+: ClapTrap(100, 100, 100, 100, 1, "default_name", 30, 20, 5, "ScavTrap")
 {
 	srand(time(NULL));
-	
-	hit_points = 100;
-	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
-	level = 1;
-	name = "default_name";
-	melee_attack_damage = 30;
-	ranged_attack_damage = 20;
-	armor_damage_reduction = 5;
-	
-	std::cout << "ScavTrap<" << name << "> is ready for fight!! (by default constructor)" << std::endl;
+
+	std::cout << "** In ScavTrap constructor ** // ";
+	std::cout << type << "<" << name << "> is ready for fight!! (by default constructor)" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& scav_trap)
+: ClapTrap(scav_trap.hit_points, scav_trap.max_hit_points, scav_trap.energy_points,
+			scav_trap.max_hit_points, scav_trap.level, scav_trap.name, scav_trap.melee_attack_damage,
+			scav_trap.ranged_attack_damage, scav_trap.armor_damage_reduction, scav_trap.type)
 {
 	srand(time(NULL));
 	
-	*this = scav_trap;
-
-	std::cout << "ScavTrap<" << name << "> is ready for fight!! (by copy constructor)" << std::endl;
+	std::cout << "** In ScavTrap constructor ** // ";
+	std::cout << type << "<" << name << "> is ready for fight!! (by copy constructor)" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& _name)
+: ClapTrap(100, 100, 100, 100, 1, _name, 30, 20, 5, "ScavTrap")
 {
 	srand(time(NULL));
-	
-	hit_points = 100;
-	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
-	level = 1;
-	name = _name;
-	melee_attack_damage = 30;
-	ranged_attack_damage = 20;
-	armor_damage_reduction = 5;
 
-	std::cout << "ScavTrap<" << name << "> is ready for fight!! (by name constructor)" << std::endl;
+	std::cout << "** In ScavTrap constructor ** // ";
+	std::cout << type << "<" << name << "> is ready for fight!! (by name constructor)" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap<" << name << "> is destroyed!!" << std::endl;
+	std::cout << "** In ScavTrap destructor ** // ";
+	std::cout << type << "<" << name << "> is destroyed!!" << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& scav_trap)
@@ -76,44 +63,6 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& scav_trap)
 	return *this;
 }
 
-void		ScavTrap::rangedAttack(std::string const & target)
-{
-	std::cout << "ScavTrap<" << name << "> attacks <" << target << "> at range, causing <" << ranged_attack_damage << "> points of damage!" << std::endl;
-}
-
-void		ScavTrap::meleeAttack(std::string const & target)
-{
-	std::cout << "ScavTrap<" << name << "> attacks <" << target << "> at melee, causing <" << melee_attack_damage << "> points of damage!" << std::endl;
-}
-
-void		ScavTrap::takeDamage(unsigned int amount)
-{
-	if (armor_damage_reduction >= amount)
-		amount = 0;
-	else
-		amount -= armor_damage_reduction;	
-	
-	std::cout << "ScavTrap<" << name << "> takes " << amount << " points of damage!!" << std::endl;
-
-	if (hit_points <= amount)
-		hit_points = 0;
-	else
-		hit_points -= amount;
-	
-	std::cout << "ScavTrap<" << name << ">'s hit_point is " << hit_points << std::endl;
-}
-
-void		ScavTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "ScavTrap<" << name << "> is repaired by " << amount << " points of hit_point, energy_point!!" << std::endl;
-	
-	hit_points = std::min(hit_points + amount, max_hit_points);
-	energy_points = std::min(energy_points + amount, max_energy_points);
-
-	
-	std::cout << "ScavTrap<" << name << ">'s hit_point is " << hit_points << ", energy_point is " << energy_points << std::endl;
-}
-
 void		ScavTrap::challengeNewcomer(std::string const & target)
 {
 	std::string		challenges[5] = {"Wake up early", "Study hard more and more", "Running without a break!!", "Eat 3 hamburgers", "Finish up to CPP08"};
@@ -128,6 +77,4 @@ void		ScavTrap::challengeNewcomer(std::string const & target)
 		int challenge_num = rand() % 5;
 		std::cout << "ScavTrap<" << name << "> gives <" << target << "> a challenge["<< challenges[challenge_num] <<"]" << std::endl;
 	}
-
-	std::cout << "ScavTrap<" << name << ">'s energy_points is " << energy_points << std::endl;
 }
