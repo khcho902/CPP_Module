@@ -6,49 +6,37 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 15:28:34 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/31 16:45:38 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:59:34 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
 
-	FragTrap ft("ft");
-	ScavTrap sc("sc");
+	ScavTrap st("st");
 
-	ft.rangedAttack("robot1");
-	ft.meleeAttack("robot2");
-
-	sc.rangedAttack("robot3");
-	sc.meleeAttack("robot4");
+	st.rangedAttack("robot1");
+	st.meleeAttack("robot2");
 
 	std::cout << std::endl;
 
-	ft.vaulthunter_dot_exe("robot3");
-	
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
-	sc.challengeNewcomer("roboot4");
+	st.challengeNewcomer("robot3");
+	st.challengeNewcomer("robot3");
+	st.challengeNewcomer("robot3");
+	st.challengeNewcomer("robot3");
+	st.challengeNewcomer("robot3");
 
 	std::cout << std::endl;
 
-	ft.takeDamage(55);
-	ft.takeDamage(65);
-
-	sc.takeDamage(55);
-	sc.takeDamage(65);
+	st.takeDamage(55);
+	st.takeDamage(65);
 
 	std::cout << std::endl;
 
-	ft.beRepaired(30);
-	ft.beRepaired(90);
-	
-	sc.beRepaired(30);
-	sc.beRepaired(90);
+	st.beRepaired(30);
+	st.beRepaired(90);
 
 	std::cout << std::endl;
 
