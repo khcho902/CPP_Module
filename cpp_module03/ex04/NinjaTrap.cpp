@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 01:40:27 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 02:04:54 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:30:03 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,16 @@ void		NinjaTrap::ninjaShoebox(const NinjaTrap& target) const
 {
 	std::cout << " * ninjaShoebox [NinjaTrap -> NinjaTrap] * " << std::endl;
 	std::cout << "Hahahaha!!  " << type << "<" << name << "> attacks " << target.getType() << "<" << target.getName() << ">" << std::endl;
+}
+
+void		NinjaTrap::rangedAttack(std::string const & target)
+{
+	std::cout << "NinjaTrap's rangedAttack function!!!!" << std::endl;
+	ClapTrap::rangedAttack(target);
+}
+
+void		NinjaTrap::meleeAttack(std::string const & target)
+{
+	std::cout << "NinjaTrap's meleeAttack function!!!!" << std::endl;
+	ClapTrap::meleeAttack(target);
 }

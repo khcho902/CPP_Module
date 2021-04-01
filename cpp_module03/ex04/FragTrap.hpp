@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:12:50 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 01:40:55 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:26:10 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
 public:
 	FragTrap(void);
@@ -28,6 +28,9 @@ public:
 	FragTrap&	operator=(const FragTrap& frag_trap);
 
 	void		vaulthunter_dot_exe(std::string const & target);
+	
+	void		rangedAttack(std::string const & target);
+	void		meleeAttack(std::string const & target);
 };
 
 #endif

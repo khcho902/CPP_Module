@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 13:48:24 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 01:07:25 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:35:15 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,16 @@ void		FragTrap::vaulthunter_dot_exe(std::string const & target)
 		int attack_num = rand() % 5;
 		std::cout << "FragTrap<" << name << "> attacks <" << target << "> at "<< attacks[attack_num] <<", causing <" << damages[attack_num] << "> points of damage!" << std::endl;
 	}
+}
+
+void		FragTrap::rangedAttack(std::string const & target)
+{
+	std::cout << "FragTrap's rangedAttack function!!!!" << std::endl;
+	ClapTrap::rangedAttack(target);
+}
+
+void		FragTrap::meleeAttack(std::string const & target)
+{
+	std::cout << "FragTrap's meleeAttack function!!!!" << std::endl;
+	ClapTrap::meleeAttack(target);
 }

@@ -6,42 +6,48 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 15:28:34 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 02:05:20 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:24:07 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main(void)
 {
+	SuperTrap super_trap("super_trap");
 	ClapTrap ct("ct");
 	FragTrap ft("ft");
 	ScavTrap st("st");
 	NinjaTrap nt("nt");
 	
-	nt.showStatus();
+	super_trap.showStatus();
 
-	nt.meleeAttack("target");
-	nt.rangedAttack("target");
+	super_trap.meleeAttack("target");
+	super_trap.rangedAttack("target");
 
-	nt.takeDamage(120);
-	nt.showStatus();
+	super_trap.takeDamage(120);
+	super_trap.showStatus();
 
-	nt.beRepaired(50);
-	nt.showStatus();
+	super_trap.beRepaired(50);
+	super_trap.showStatus();
+
+	std::cout << "\n###############################################\n" << std::endl;
+
+	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("target");
+	super_trap.vaulthunter_dot_exe("target");
 	
 	std::cout << "\n###############################################\n" << std::endl;
 
-	nt.ninjaShoebox(ct);
+	super_trap.ninjaShoebox(ct);
 	std::cout << std::endl;
-	nt.ninjaShoebox(ft);
+	super_trap.ninjaShoebox(ft);
 	std::cout << std::endl;
-	nt.ninjaShoebox(st);
+	super_trap.ninjaShoebox(st);
 	std::cout << std::endl;
-	nt.ninjaShoebox(nt);
+	super_trap.ninjaShoebox(nt);
 
 	std::cout << "\n###############################################\n" << std::endl;
 	
