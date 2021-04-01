@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 16:26:16 by kycho             #+#    #+#             */
-/*   Updated: 2021/03/31 16:40:36 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:51:59 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ ScavTrap::ScavTrap(void)
 	
 	hit_points = 100;
 	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
+	energy_points = 50;
+	max_energy_points = 50;
 	level = 1;
 	name = "default_name";
-	melee_attack_damage = 30;
-	ranged_attack_damage = 20;
-	armor_damage_reduction = 5;
+	melee_attack_damage = 20;
+	ranged_attack_damage = 15;
+	armor_damage_reduction = 3;
 	
 	std::cout << "ScavTrap<" << name << "> is ready for fight!! (by default constructor)" << std::endl;
 }
@@ -44,13 +44,13 @@ ScavTrap::ScavTrap(const std::string& _name)
 	
 	hit_points = 100;
 	max_hit_points = 100;
-	energy_points = 100;
-	max_energy_points = 100;
+	energy_points = 50;
+	max_energy_points = 50;
 	level = 1;
 	name = _name;
-	melee_attack_damage = 30;
-	ranged_attack_damage = 20;
-	armor_damage_reduction = 5;
+	melee_attack_damage = 20;
+	ranged_attack_damage = 15;
+	armor_damage_reduction = 3;
 
 	std::cout << "ScavTrap<" << name << "> is ready for fight!! (by name constructor)" << std::endl;
 }

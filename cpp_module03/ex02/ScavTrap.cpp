@@ -6,14 +6,14 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 16:26:16 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/01 01:07:48 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/01 16:52:58 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void)
-: ClapTrap(100, 100, 100, 100, 1, "default_name", 30, 20, 5, "ScavTrap")
+: ClapTrap(100, 100, 50, 50, 1, "default_name", 20, 15, 3, "ScavTrap")
 {
 	srand(time(NULL));
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(const ScavTrap& scav_trap)
 }
 
 ScavTrap::ScavTrap(const std::string& _name)
-: ClapTrap(100, 100, 100, 100, 1, _name, 30, 20, 5, "ScavTrap")
+: ClapTrap(100, 100, 50, 50, 1, _name, 20, 15, 3, "ScavTrap")
 {
 	srand(time(NULL));
 
