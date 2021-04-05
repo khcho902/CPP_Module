@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 12:12:55 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/02 12:57:36 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/05 20:47:54 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Sorcerer
 {
     std::string name;
     std::string title;
+
     Sorcerer(void);
 
 public:

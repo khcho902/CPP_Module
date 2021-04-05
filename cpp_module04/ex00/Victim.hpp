@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 12:41:28 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/02 16:20:49 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/05 20:45:39 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ protected:
 public:
     Victim(std::string name);
     Victim(const Victim& victim);
-    ~Victim();
+    virtual ~Victim();
 
     Victim& operator=(const Victim& victim);
 
