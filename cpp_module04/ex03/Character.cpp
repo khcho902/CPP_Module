@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:06:14 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/05 18:30:02 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 15:51:02 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	if (0 <= idx && idx < 4)
+	if (0 <= idx && idx < 4 && inventory[idx] != NULL)
 	{
 		inventory[idx] = NULL;
 	}
