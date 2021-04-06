@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 12:34:00 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/05 12:55:10 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 15:05:28 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator& other)
 
 AssaultTerminator::~AssaultTerminator()
 {
-	std::cout <<  "I’ll be back..." << std::endl;
+	std::cout <<  "I'll be back..." << std::endl;
 }
 
 AssaultTerminator& AssaultTerminator::operator=(const AssaultTerminator& other)
