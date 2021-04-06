@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 19:28:05 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/04 20:00:01 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 14:28:16 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class PowerFist : public AWeapon
 public:
 	PowerFist(void);
 	PowerFist(const PowerFist& other);
-	~PowerFist();
+	virtual ~PowerFist();
 
 	PowerFist& operator=(const PowerFist& other);
 

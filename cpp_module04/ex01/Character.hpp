@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 02:48:50 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/05 11:29:53 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 14:26:50 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ public:
 
 	int getAP(void) const;
 	AWeapon* getAWeapon(void) const;
-
-	
-
 
 };
 

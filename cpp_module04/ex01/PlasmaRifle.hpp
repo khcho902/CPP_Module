@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 19:10:37 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/04 19:59:44 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 14:28:06 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class PlasmaRifle : public AWeapon
 public:
 	PlasmaRifle(void);
 	PlasmaRifle(const PlasmaRifle& other);
-	~PlasmaRifle();
+	virtual ~PlasmaRifle();
 
 	PlasmaRifle& operator=(const PlasmaRifle& other);
 

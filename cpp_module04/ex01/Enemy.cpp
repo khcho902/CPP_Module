@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 02:30:15 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/05 02:36:10 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/06 14:38:19 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void Enemy::takeDamage(int damage)
 {
 	if (damage < 0)
 		return ;
-	hp -= damage;
+	hp = std::max(0, hp - damage);
 }
