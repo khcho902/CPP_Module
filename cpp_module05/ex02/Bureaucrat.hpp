@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:18:22 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 16:22:33 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/07 17:00:42 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ public:
 	void decreaseGrade(void);
 
 	void signForm(Form& form) const;
+	void executeForm(Form& form) const;
 
 	class GradeTooHighException : public std::exception
 	{
