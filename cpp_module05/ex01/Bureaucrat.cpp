@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:18:20 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 14:19:06 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/07 16:38:10 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,19 @@ void Bureaucrat::decreaseGrade(void)
 	grade++;
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+}
+
+void Bureaucrat::signForm(Form& form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << "<" << name << "> signs <" << form.getName() << ">" << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cout << "<" << name << "> cannot sign <" << form.getName() << "> because <" << e.what() << ">" << std::endl;
+	}	
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
