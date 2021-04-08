@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:18:18 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/08 14:19:24 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 15:09:38 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,23 @@ int main(void)
 		bu.executeForm(*form);
 		delete form;
 
+		std::cout << std::endl;
+
 		form = intern.makeForm("robotomy_request", "target2");
 		bu.executeForm(*form);
 		bu.signForm(*form);
 		bu.executeForm(*form);
 		delete form ;
 
+		std::cout << std::endl;
+
 		form = intern.makeForm("presidential_pardon", "target3");
 		bu.executeForm(*form);
 		bu.signForm(*form);
 		bu.executeForm(*form);
 		delete form ;
+
+		std::cout << std::endl;
 
 		form = intern.makeForm("no_match_form_name", "target4");		
 		bu.executeForm(*form);
