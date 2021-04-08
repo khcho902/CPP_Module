@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:50:19 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 17:39:02 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 10:16:08 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		Form::beSigned(const Bureaucrat& bureaucrat)
 	isSigned = true;
 }
 
-void Form::preprocess_execute(Bureaucrat const & executor) const
+void Form::execute(Bureaucrat const & executor) const
 {
 	if (isSigned == false)
 	{
@@ -84,6 +84,8 @@ void Form::preprocess_execute(Bureaucrat const & executor) const
 	{
 		throw Form::GradeTooLowException();
 	}
+	
+	action();
 }
 
 const char* Form::GradeTooHighException::what() const throw()

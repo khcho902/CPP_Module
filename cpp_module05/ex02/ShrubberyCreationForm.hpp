@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 17:40:09 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 19:08:57 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 10:17:02 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 
 	ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
 
-	void execute(Bureaucrat const & executor) const;
+	void action(void) const;
 };
 
 #endif

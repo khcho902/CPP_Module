@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 14:50:06 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 17:59:58 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 10:16:00 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ public:
 	int			getExecuteGrade(void) const;
 	void		beSigned(const Bureaucrat& bureaucrat);
 
-	virtual void execute(Bureaucrat const & executor) const = 0;
-	void preprocess_execute(Bureaucrat const & executor) const;
+	virtual void execute(Bureaucrat const & executor) const;
+	virtual void action(void) const = 0;
 
 	class GradeTooHighException : public std::exception
 	{

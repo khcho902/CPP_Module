@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:42:47 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 19:09:02 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 10:16:49 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 
 	RobotomyRequestForm& operator=(const RobotomyRequestForm& other);
 
-	void execute(Bureaucrat const & executor) const;
+	void action(void) const;
 };
 
 #endif

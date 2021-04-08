@@ -6,14 +6,14 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 17:40:16 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 19:35:21 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 11:16:15 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(void) :
-	Form("ShrubberyCreationForm", 145, 137),
+	Form("shrubbery_creation", 145, 137),
 	target("default")
 {}
 
@@ -23,7 +23,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
 {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string target) :
-	Form("ShrubberyCreationForm", 145, 137),
+	Form("shrubbery_creation", 145, 137),
 	target(target)
 {}
 
@@ -36,10 +36,8 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return *this;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+void ShrubberyCreationForm::action(void) const
 {
-	Form::preprocess_execute(executor);
-
 	std::ofstream out(target + "_shrubbery");
 
 	out <<"             _{\\ _{\\{\\/}/}/}__               "<< std::endl;

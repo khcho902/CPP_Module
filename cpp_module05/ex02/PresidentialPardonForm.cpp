@@ -6,14 +6,14 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 18:56:31 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/07 19:33:38 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/08 11:15:52 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(void) :
-	Form("PresidentialPardonForm", 72, 45),
+	Form("presidential_pardon", 72, 45),
 	target("default")
 {}
 
@@ -23,7 +23,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& oth
 {}
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string target) :
-	Form("PresidentialPardonForm", 72, 45),
+	Form("presidential_pardon", 72, 45),
 	target(target)
 {}
 
@@ -36,9 +36,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 	return *this;
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+void PresidentialPardonForm::action(void) const
 {
-	Form::preprocess_execute(executor);
-
 	std::cout << "<" << target << "> has been pardoned by Zafod Beeblebrox." << std::endl;
 }
