@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:12:15 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/10 00:54:18 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/11 23:59:14 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void Converter::toChar(void) const
 {
 	std::cout << "char: ";
 	
-	if (std::isnan(value) || std::isinf(value) || impossible)
+	if (impossible || std::isnan(value) || std::isinf(value))
 	{
 		std::cout << "impossible" << std::endl;
 		return ;
@@ -88,7 +88,7 @@ void Converter::toInt(void) const
 {
 	std::cout << "int: ";
 	
-	if (std::isnan(value) || value > INT_MAX || value < INT_MIN || impossible)
+	if (impossible || std::isnan(value) || value > INT_MAX || value < INT_MIN)
 	{
 		std::cout << "impossible" << std::endl;
 		return;
