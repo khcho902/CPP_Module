@@ -6,7 +6,7 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 21:59:07 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/11 22:27:08 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/12 01:00:01 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,22 +59,27 @@ int main(void)
 	A& a_ref = *a_ptr;
 	identify_from_pointer(dynamic_cast<Base *>(a_ptr));
 	identify_from_reference(dynamic_cast<Base &>(a_ref));
+	delete a_ptr;
 
 	B* b_ptr = new B;
 	B& b_ref = *b_ptr;
 	identify_from_pointer(dynamic_cast<Base *>(b_ptr));
 	identify_from_reference(dynamic_cast<Base &>(b_ref));
+	delete b_ptr;
 
 	C* c_ptr = new C;
 	C& c_ref = *c_ptr;
 	identify_from_pointer(dynamic_cast<Base *>(c_ptr));
 	identify_from_reference(dynamic_cast<Base &>(c_ref));
+	delete c_ptr;
 
 	std::cout << "===================" << std::endl;
 
 	Base *base_ptr = generate();
 	identify_from_pointer(base_ptr);
 	identify_from_reference(*base_ptr);
+
+	delete base_ptr;
 
 	return 0;	
 }
