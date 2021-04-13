@@ -6,14 +6,13 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 13:13:15 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/13 14:18:12 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/13 15:39:26 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
-#include <iostream>
 #include <vector>
 #include <algorithm>
 

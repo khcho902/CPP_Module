@@ -6,10 +6,11 @@
 /*   By: kycho <kycho@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 13:13:13 by kycho             #+#    #+#             */
-/*   Updated: 2021/04/13 14:34:15 by kycho            ###   ########.fr       */
+/*   Updated: 2021/04/13 15:38:31 by kycho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "span.hpp"
 
 int main(void)
